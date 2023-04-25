@@ -83,10 +83,14 @@ h5 {
 /*   width: 50%; */
 }
 
+iframe {
+  margin: 10%;
+}
+
 p { 
   position: relative;
   z-index: 1;
-  text-align: center;
+  text-align: left;
   width: 100%;
 /*   font-family: 'PT Sans', sans-serif; */
   font-family: 'Raleway', sans-serif;
