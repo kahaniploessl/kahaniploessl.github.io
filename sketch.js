@@ -7,9 +7,9 @@ let characters;
 function preload() {
   // load files
   theShader3 = loadShader("assets/shader.vert", "assets/shader3.frag");
-  billo = loadFont('assets/BILLO.TTF');
-  gau = loadFont('assets/GAU.TTF');
-  characters = loadImage('assets/squadup.png');
+//   billo = loadFont('assets/BILLO.TTF');
+//   gau = loadFont('assets/GAU.TTF');
+//   characters = loadImage('assets/squadup.png');
 
 }
 
