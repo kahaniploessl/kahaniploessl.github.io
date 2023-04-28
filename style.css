@@ -41,6 +41,35 @@ h2 {
   margin: 0;
 }
 
+#navBar {
+  font-family: "gau";
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(245,245,255,1);
+  position: absolute;
+  top:800px;
+  display: block;
+  z-index: 5;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-bottom: 1px white solid;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  
+  padding: 8px 20px;
+}
+
 #about { 
   position: relative;
   z-index: 1;
