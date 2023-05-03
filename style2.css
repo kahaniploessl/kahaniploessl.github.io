@@ -82,7 +82,8 @@ li a {
 
 #artist {
   margin: 5%;
-  padding: 5% 7% 5% 7%;
+/*   padding: 5% 7% 5% 7%; */
+  padding: 0 7% 0 7%;
 }
 
 
