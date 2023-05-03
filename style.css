@@ -66,8 +66,9 @@ li {
 
 li a {
   display: block;
-  
   padding: 8px 20px;
+  position: relative;
+  left:20px;
 }
 
 #about { 
