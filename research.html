@@ -1,0 +1,198 @@
+<!-- MOUSE CURSOR and POSITION MOVE EXAMPLE -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--     <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-physics-system@3.3.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.0/dist/aframe-extras.min.js"></script>
+ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Research</title>
+
+    <link rel="stylesheet" href="/menu.css" />
+  </head>
+
+  <body>
+    <div id="menu">
+      <a id="title" href="index.html">KAHANI | कहानी</a>
+      <p id="hovered-portal-title"></p>
+
+      <a class="pages" href="about.html">About <br /></a>
+      <a class="pages" href="art.html">Art <br /></a>
+      <a id="current" class="pages" href="research.html">Research <br /></a>
+      <a class="pages" href="exhibits.html">Exhibits <br /></a>
+    </div>
+
+    <div id="newBody">
+      <div id="textBody">
+        <div id="Entry1" class="researchEntries">
+          <h2>Crossing Fonds</h2>
+          <h3>
+            <a href="https://crossingfonds.com">https://crossingfonds.com</a>
+          </h3>
+          <br />
+          <h4>
+            Research Assistant <br />
+            Visual Analytics Lab, OCAD U<br />
+            2022-2024
+          </h4>
+
+          <br />
+
+          <p>
+            Crossing Fonds addresses the need to formalize collaborative access
+            across archives, enabling research, scholarship and the
+            reinterpretation of collections through contemporary filters.
+          </p>
+
+          <img
+            src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/CF_Thumbnail.png?v=1717281799031"
+          />
+        </div>
+        <div id="Entry2" class="researchEntries">
+          <h2>Bodies in Play <br /></h2>
+          <h3>
+            <a href="https://bodiesinplay.org">https://bodiesinplay.org</a>
+          </h3>
+          <br />
+          <h4>
+            Research Assistant <br />
+            Game:Play Lab, Social Body Lab, OCAD U <br />
+            2023 - 2024
+          </h4>
+
+          <br />
+
+          <p>
+            Bodies in Play (BiP) is a three-year collaboration between OCAD
+            University’s game:play Lab and Social Body Lab and Dames Making
+            Games (DMG), aiming to revolutionize creative technology by
+            prioritizing inclusive and innovative design practices. Through game
+            jams and a residency program, we’re bridging the gap between
+            creative, technical, and conceptual work in wearable technology and
+            extended reality (XR).
+          </p>
+          <!--           <img
+            src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/BIP_Comp.png?v=1717280780501"
+          /> -->
+
+          <img
+            src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/biplogo.png?v=1717354466324"
+          />
+        </div>
+        <div id="Entry3" class="researchEntries">
+          <h2>De-generate <br /></h2>
+          <h3>
+            <a href="https://kahaniploessl.github.io"
+              >https://kahaniploessl.github.io</a
+            >
+          </h3>
+          <br />
+          <h4>
+            Undergraduate Thesis Project <br />
+            Digital Futures, OCAD U<br />
+            2022 - 2023
+          </h4>
+
+          <br />
+
+          <p>
+            De-generate is an experimental fighting video game that explores how
+            generative art may permeate as not only a technological aesthetic,
+            but an essential component in gameplay and game evolution. Primarily
+            realized through generative characters, digital beings and their
+            core structural code may be intercepted and facilitated by the
+            player, resulting in new, adaptive, and expressive experiences.
+          </p>
+          <img
+            src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/squadup.png?v=1717281437677"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <style>
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    #newBody {
+      flex: 1; /* Take remaining space */
+      padding: 20px;
+      /*       display: flex; */
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      /*       position: relative; */
+      height: 90vh;
+      width: 100%;
+    }
+
+    .researchEntries:hover {
+      background-color: rgba(255, 228, 156, 0.25);
+    }
+
+    /*     #Entry1 {
+          border-right: solid 1px black;
+        }
+
+        #Entry1 {
+          border-right: solid 1px black;
+        } */
+
+    .researchEntries {
+      /*       background-color: rgba(255, 228, 156, 0.25); */
+      border-radius: 10px;
+      border-right: solid 1px black;
+      padding: 25px;
+      margin: 1px;
+      width: 28%;
+      height: 90vh;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    p {
+      width: 100%;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 300;
+    }
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 700;
+      color: #e64e2c;
+    }
+
+    h3 {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 700;
+    }
+
+    h4 {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 300;
+    }
+  </style>
+  <script></script>
+</html>

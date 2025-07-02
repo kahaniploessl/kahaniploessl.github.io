@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.0/dist/aframe-extras.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+<!--     <link rel="stylesheet" href="/art.css" /> -->
+    <link rel="stylesheet" href="style/menu.css" />
+    <script src="/script.js" defer></script>
+
+    <title>Blender Characters</title>
+  </head>
+  <body>
+    <div id="menu">
+      <a id="title" href="index.html">KAHANI | कहानी</a>
+      <p id="hovered-portal-title"></p>
+
+      <a class="pages" href="about.html">About <br /></a>
+      <a id="current" class="pages" href="art.html">Art <br /></a>
+      <div id="subart">
+        <a class="subpage" href="art.html">Generative Collage <br /></a>
+        <!--         <a id="subcurrent" class="subpage" href="art.html"
+          >Collective Atma<br
+        /></a> -->
+
+        <a class="subpage" href="genSketch.html">P5 Sketchbook<br /></a>
+        <a class="subpage" id="subcurrent" href="blenderCharacters.html">Blender Characters<br /></a>
+        <br />
+        <!-- <a class="subpage" href="digitalPetri.html">digitalPetri<br /></a> -->
+        <!-- <a class="subpage" href="pixelWater.html">pixelWater<br /></a> -->
+        <a class="subpage" href="virtualShiva.html">VIRTUAL SHIVA<br /></a>
+        
+        <a class="subpage" href="cAtma.html"
+          >Collective Ātma<br
+        /></a>
+        <a class="subpage" href="deGenerate.html">de-generate<br /></a>
+        <a class="subpage" href="hiveMind.html">Hive Mind<br /></a>
+        
+        <!--         <a class="subpage" href="art.html">Hive Mind<br /></a>
+        <a class="subpage" href="art.html">enigma<br /></a> -->
+      </div>
+
+      <!-- <a class="pages" href="research.html">Research <br /></a> -->
+      <a class="pages" href="exhibits.html">CV <br /></a>
+    </div>
+
+    <div id="newBody">
+      
+      
+      <model-viewer src="assets/swan2.glb"
+              camera-controls auto-rotate></model-viewer>
+      
+      <model-viewer src="assets/whoMe.gltf"
+              camera-controls auto-rotate></model-viewer>
+      
+      
+      
+<!--       <model-viewer src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/shivaAvatar.glb?v=1726864567473"
+              camera-controls auto-rotate></model-viewer> -->
+      
+      
+      <model-viewer src="assets/3avatarsConnectedHands.glb"
+              camera-controls auto-rotate></model-viewer>
+      
+      <model-viewer src="assets/slimeCatGLB.glb"
+              camera-controls auto-rotate></model-viewer>
+      
+      <model-viewer src="assets/avatarEnergyNewHair1.glb"
+              camera-controls auto-rotate></model-viewer>
+      
+      
+      <model-viewer src="assets/witch.glb"
+              camera-controls auto-rotate></model-viewer>
+      
+      <model-viewer src="assets/ghostEntityGLB.glb"
+              camera-controls auto-rotate></model-viewer>
+      
+      
+      <model-viewer src="assets/peerBot1.glb"
+              camera-controls auto-rotate></model-viewer>
+      <model-viewer src="assets/maker3.gltf"
+              camera-controls auto-rotate></model-viewer>
+      
+      
+      <model-viewer src="assets/bendyGLB.glb"
+              camera-controls auto-rotate></model-viewer>
+      
+      
+<!--       <div class="aContainer">
+        <a-scene embedded  cursor="rayOrigin: mouse">
+            <a-light type="ambient" color="#ffe49c"></a-light>
+            <a-light type="directional" color="white" intensity="2.0" position="-3 3 30"></a-light>
+
+          <a-entity
+            gltf-model="url(https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/maker3.gltf?v=17170350575204)"
+            position="0 0 -30"
+            scale="1 1 1"
+          >
+          </a-entity>
+        </a-scene> -->
+      </div>
+      
+          
+      
+<!--       <div class="horizontal-scroll">
+        <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/collectiveAtma0.png?v=1723840806902"
+          class="painting"
+        />
+        <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/collectiveAtma1.png?v=1723840809814"
+          class="painting"
+        />
+        <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/collectiveAtma4.jpg?v=1723841377615"
+          class="painting"
+        />
+        <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/Screenshot%202024-08-16%20at%206.56.38%E2%80%AFPM.png?v=1723845495688"
+          class="painting"
+        />
+        
+        <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/collectiveAtma2.png?v=1723840810928"
+          class="painting"
+        />
+        <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/collectiveAtma3.png?v=1723840811995"
+          class="painting"
+        />
+        
+      </div>
+      <h1>Collective Ātma</h1>
+
+      <h3>
+        Web Version (Requires PS4 Dualshock):
+        <a href="https://kahaniploessl.github.io/collectiveAtma/"> Play Now!</a>
+      </h3>
+      <h3>
+        Kinky Love - Khyber, Halifax, August 1-17 2024
+      </h3>
+
+      <p>
+        “ātma in virtual avatārs” is a video game installation that depicts the
+        cosmic soul of avatar bodies, exploring the interplay between physical
+        and virtual spaces and the energy between two entities. Intended to be
+        experienced by two people, players interact with the installation by
+        sharing a controller; each half of the controller represents different
+        contributions to the ephemeral and collective aura.
+      </p> -->
+
+
+<!--     </div> -->
+  </body>
+
+  <style>
+    
+    model-viewer{
+/*       width:25%; */
+/*       border: 1px solid black; */
+      width: 325px;
+      height: 350px;
+      margin: 0px;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0px;
+    }
+    
+    h1 {
+      margin: 0px;
+      font-family: "Roboto Condensed", sans-serif;
+      color: #e64e2c;
+      font-size: 50px;
+    }
+
+    h3 {
+      font-family: "Roboto Condensed", sans-serif;
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      color: grey;
+      font-size: 20px;
+      font-weight: 300;
+    }
+
+    /*     img {
+
+      height: auto; 
+      position: relative;
+      z-index: 100;
+    }
+ */
+    /*     #blender {
+      width: 20%;
+      height: auto;
+    } */
+
+    p {
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 300;
+      width: 80vw;
+      font-size: 30px;
+      color: rgb(100, 100, 100);
+    }
+
+    .horizontal-scroll {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 83vw;
+      padding-bottom: 10px;
+    }
+
+    .horizontal-scroll img {
+      width: auto;
+      height: 600px; /* Adjust height as needed */
+      margin-right: 10px;
+      display: inline-block;
+    }
+    
+    
+    #newBody {
+/*       width: 1000px; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 1000px;
+    }
+  </style>
+</html>
+
+

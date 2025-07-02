@@ -1,155 +1,120 @@
+<!-- MOUSE CURSOR and POSITION MOVE EXAMPLE -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Raleway&display=swap" rel="stylesheet">
-    
-    
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <!--     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-physics-system@3.3.0/dist/aframe-physics-system.min.js"></script> -->
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.0/dist/aframe-extras.min.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Kahani Ploessl</title>
+
+    <!-- The website stylesheet -->
+        <link rel="stylesheet" href="style/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="js/script.js" defer></script>
   </head>
   <body>
-    
-    <div id="title">
-      <h1> de-generate </h1>
-    </div>
-    
-    <div id="navBar">
-      <ul>
-        <li><a href="index.html" id="page1"> The Project </a> </li>
-        <li><a href="artist.html" id="page2"> The Artist </a></li>
-      </ul>
+    <a-scene background="color: #ffe49c" cursor="rayOrigin: mouse">
+      <a-light type="ambient" color="#ffe49c"></a-light>
+<!--       <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity> -->
+      <a-light type="directional" color="#ffffff" intensity="2.0" position="-3 3 30"></a-light>
 
-    </div>
-    
-    <div id="content">
-    
-      <div id="about">
-        
-        <div id="demo">
+      <!-- About Portal -->
+      <a-entity
+        geometry="primitive: sphere; radius:2"
+        position="-7 5 -15"
+        id="aboutPortal"
+        class="clickable"
+        material="color: red"
+        click-page="https://kahaniploessl.github.io/about.html"
+        hover-color="color: blue"
+        move-sine-wave="amplitude:4; frequency:1; offset:5"
+        hover-text="about"
+      ></a-entity>
+
+      <!-- Research Portal -->
+<!--       <a-entity
+        geometry="primitive: sphere; radius:2"
+        position="-7 5 -15"
+        id="researchPortal"
+        class="clickable"
+        material="color: red"
+        click-page="https://kahani-portfolio.glitch.me/research.html"
+        hover-color="color: blue"
+        move-sine-wave="amplitude:4; frequency:1; offset:1"
+        hover-text="research"
+      ></a-entity> -->
       
-          <h2>Demo</h2>
+      <!-- Art Portal -->
+      <a-entity
+        geometry="primitive: sphere; radius:2"
+        position="-7 5 -15"
+        id="artPortal"
+        class="clickable"
+        material="color: red"
+        click-page="https://kahaniploessl.github.io/art.html"
+        hover-color="color: blue"
+        move-sine-wave="amplitude:3; frequency:2; offset:11"
+        hover-text="art"
+      ></a-entity>
 
-          <iframe width="840" height="472.5" src="https://www.youtube.com/embed/YSAc19SIJ4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        
+      <!-- Exhibits Portal -->
+      <a-entity
+        geometry="primitive: sphere; radius:2"
+        position="-7 5 -15"
+        id="exhibitsPortal"
+        class="clickable"
+        material="color: red"
+        click-page="https://kahaniploessl.github.io/exhibits.html"
+        hover-color="color: blue"
+        move-sine-wave="amplitude:7; frequency:1; offset:50"
+        hover-text="exhibits"
+      ></a-entity>
+
+      <!-- Maker Model -->
+      <a-entity
+        gltf-model="assets/maker3.gltf"
+        position="13 2 -30"
+        scale="1 1 1"
+      >
+      </a-entity>
+    </a-scene>
+
+      <h1>KAHANI | कहानी</h1>
+
+      <div id="menu">
+        <p id="hovered-portal-title"></p>
+
+        <a id="aboutMenu" href="about.html">About <br /></a>
+        <a id="artMenu" href="art.html">Art <br /></a>
+        <!-- <a id="researchMenu" href="research.html">Research <br /></a> -->
+        <a id="exhibitsMenu" href="exhibits.html">CV <br /></a>
       </div>
-      
-        <h2>Abstract</h2>
-        <br>
-        <p> de-generate is an experimental fighting video game that explores how generative art may permeate as not only a technological aesthetic, but an essential component in gameplay and game evolution. Primarily realized through generative characters, digital beings and their core structural code may be intercepted and facilitated by the player, resulting in new, adaptive, and expressive experiences. As shape shifting avatars, generative characters maximizing the capabilities of the digital realm. 
-        </p>
-          <br>
-          <br>
-          <h2>Introduction</h2>
-          <br>
-          <p>Interfaces, as they have been traditionally established, firmly place human intention and raw computation at opposite ends of the screen. While functionally efficient, this separation between collaborators limits the infinite potential of digital expression. Interfaces that push backend capabilities to the forefront will empower users to shape their own digital inhabitance with flexibility, sovereignty, and longevity. 
-
-            <br>
-          <br>
-            
-de-generate postulates what such interfaces may entail through an experimental hybrid of generative art (the approach) - and video games - the medium. Featuring computationally unbounded characters, de-generate makes full use of its algorithmic makeup with generative meshes, movements, and game functions. Attributed by a sense of emergence, generative characters have been coded as such - to exist - not to operate. The fundamental structure may be harnessed and altered alongside player input, leading to emergent gameplay that cannot be predicted.
-
-            <br>
-          <br>
-            
-Video games as the medium, provides the perfect environment for exploring new digital emergence due to their controlled system, interdisciplinary components, and real-time participation. With all factors accounted for, de-generate’s character focused format cleverly disguises what is otherwise, user testing of the generative dynamics. While video games commonly rely on predefined game beats, de-generate explores how generative discovery may replace simulated gaming dynamics with actual computation. 
-
-            <br>
-          <br>
-            
-What meta game emerges from the chaos, is entirely unknown, and is itself a generative process. As such, all development of a meta game has been relinquished to participators of the game. How players adopt strategies and tactics outside the core gameplay mechanics, especially when  involving exploitation of what may be ‘wrong’ with de-generate, is essential in realizing the project’s core themes of autonomous digital inhabitance.
-
-            <br>
-          <br>
-            
-Departing from established interfaces, de-generate offers a new way of exploring digital reality, and presents an exciting example of how digital interfaces may maximize human extension into computation.
-</p>
-        
-        <br>
-        
-        <p> Full Thesis Document: <a href="https://kahaniploessl.github.io/deGeneratePaper.pdf">kahaniploessl.github.io/deGeneratePaper.pdf</a></p>
-
-
-      </div>
-
-      <div id="characters">
-        <h2>Characters</h2>
-        
-        <img src="assets/squadup.png">
-        <br>
-        
-        <h5> tulip </h5>
-        
-        <p class="profiles">tulip is de-generate's baseline character, meaning they do not employ any generative technique. Instead, tulip serves as a comparitive refence, establishing what standard characters entail, and more importantly, how generative mutations disrupt the norm. </p>
-        
-        <img src="assets/tulip.png">
-        
-        
-        <h4> Generative Deformation </h4>
-        <br>
-        <p>
-          Within phase 1 of de-generate, the primary genereative techniques explored is a process of generative mesh deformations. This method involves storing all vertices of an object in an array, manipulating them within a C# script alongside real time events, and then updating these changes to the corresponding game objects. Manipulation occurs by instantiating either an artificial or reactive force, meaning deformations may be both active and reactive. Furthermore, coding how each verticy responds to the instantiated force resulted in several expressive experimental deformation. Repressenting this range of applications, the 4 folowwing characters each exmplify a unique reinterpretation of the base function.
-        </p>
-        
-        
-        <h5> metalMan </h5>
-        
-        <p class="profiles">As the name implies, metalMan’s mesh deformations are elementally inspired by the malleability of metal. This is indicated by three main state features: sharp attacks, defence armour, and reactive denting. Sharp attacks enabled by Spikey at a randomly generated frequencies and force vectors erupt from metalMan’s surface. Defensive armour, rapidly expands a Bound enabled mesh, increasing defence but drastically decreasing speed. And lastly, localized and semi-permanent deformations achieved with a low Spread Percent and Elasticity set to zero, occur in reaction to received attacks. These new deformations may be utilized in regular attack moves, but will disappear when the player switches to another state.</p>
-        
-        <img src="assets/metalMan.png">
-        
-        
-        <h5> plasMan </h5>
-        
-        <p class="profiles">plasMan uses experimental mesh deformation variables for visualizing chaotic plasmic energy. This effect, applied abstractly to the outer body, is juxtaposed overtop a rigid skeleton. Here generativeness is used for charging and expelling bursts of energy. Player inputs may be stockpiled into perpetual mesh deformations reused in energy attacks, such as shooting plasma balls or energy bursts deformations.</p>
-        
-        <img src="assets/plasMan.png">
-        
-        <h5> slimeCat </h5>
-        
-        <p class="profiles">slimeCat introduces generative authorship as a moldable character. Here slimeCat’s shape can be squished, expanded, and puddled to player liking, strategy, random generative elements, or in reaction to in game events. Squishing applies convex of concave deformations (depending on vector direction). Expansion scales up slimeCat with ballooning deformation. And puddle enables Wobble to melt slimeCat into a hard to hit state. These deformations alter the backend mesh and collider, enabling each transformation to redefine how slimeCat interacts with other characters. For example, a larger slimeCat may be more powerful and likely to land an attack, however at this size, they’d also make an easier target.
-</p>
-        
-        <img src="assets/slimeCat.png">
-        
-        <h5> rockerChic </h5>
-        
-        <p class="profiles">rockerChic is the simplest generative character, with their mesh deformation, the smashing of their guitar, performing in reaction to the player’s own destruction. Upon entering the opponent’s collider, the guitar breaks with a low Spread Percentage, Elasticity set to zero, and Indent enabled, meaning deformations are localized, permanent, and brittle. The guitar’s acquired damage can then be reutilized in a “rock out” move, in which rockerChic plays the guitar to project a generative music attack.
-</p>
-        
-        <img src="assets/rockerChic.png">
-        
-        <h4>Future Characters</h4>
-      
-        <br>
-        
-        <h5> hellBear, mushGang, swarmOfSquids </h5>
-        
-        <p class="profiles">hellBear, mushGang, and swarmofSquids will be introduced in the next phase of de-generate. These characters employ a much different appraoch to generetaive character design with genereative spawns and mathematical surfaces and movement. More specifically, hellBear shoots generative flames, spawned from their mouth. mushGang introduces AI controlled mushroom minion spawns. And lastly, swarmOfSquids involves several spawned squids that move generativelt in relation to one another.
-     </p>
-        
-        <img src="assets/futureCharacters.png">
-        
-        
-        
-        
-        
-      </div>
-    </div>
     
-    <script src="sketch.js"></script>
+    <h3>
+      click + drag
+    </h3>
+      
+    
   </body>
-  
+
   <style>
-    @font-face {
-        font-family: "gau";
-        src: url("assets/GAU.TTF");
-    }
 
   </style>
+  <script>
+  </script>
 </html>

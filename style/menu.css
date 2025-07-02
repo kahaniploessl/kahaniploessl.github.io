@@ -1,0 +1,91 @@
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Ensure the canvas is behind other content */
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(252, 252, 250);
+/*   background-color: #87f1ff; */
+  /*     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(129, 173, 255)); */
+
+  display: flex;
+}
+
+#newBody {
+  flex: 1; /* Take remaining space */
+  padding: 20px;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: relative;
+  height: 200vh;
+  background-color: rgba(200, 200, 200, 0.1);
+}
+
+#title {
+  margin: 0;
+  padding: 0;
+  font-size: 45px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+}
+
+#menu {
+/*   background-color:#ffe49c; */
+  font-family: "Roboto Condensed", sans-serif;
+  padding-top: 15px;
+  padding-left: 15px;
+  margin: 0;
+  width: 12em;
+  border-right: 3px solid rgba(200,200,200,0.05);
+/*   height: 200vh; */
+  overflow-y: auto; /* Enable vertical scrolling if menu content overflows */
+  
+/*   border-image: linear-gradient(to bottom, white 100%, transparent 100%) 1; */
+}
+
+#current {
+  color: #e64e2c;
+  font-weight: 500;
+}
+
+#subcurrent {
+  color: #e64e2c;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+a:hover {
+  margin: 0;
+  padding: 0;
+  color: #e64e2c;
+  font-weight: 500;
+}
+
+.subpage {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+#subart {
+  margin: 2px;
+  padding-left: 10px;
+}
+
+.hovered {
+  color: #e64e2c;
+  font-weight: 500;
+}

@@ -1,0 +1,697 @@
+<!-- MOUSE CURSOR and POSITION MOVE EXAMPLE -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--     <link rel="icon" href="https://glitch.com/favicon.ico" /> -->
+    <!--     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script> -->
+    <!--     <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script> -->
+    <!--     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-physics-system@3.3.0/dist/aframe-physics-system.min.js"></script> -->
+    <!--     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script> -->
+    <!--     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.0/dist/aframe-extras.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <!-- p5.js library -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Art Collage</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="style/menu.css" />
+
+    <!-- The website JavaScript file -->
+  </head>
+  <body>
+    <div id="menu">
+      <a id="title" href="index.html">KAHANI | कहानी</a>
+      <p id="hovered-portal-title"></p>
+
+      <a class="pages" href="about.html">About <br /></a>
+      <a id="current" class="pages" href="art.html">Art <br /></a>
+      <div id="subart">
+        <a id="subcurrent" class="subpage" href="art.html"
+          >Generative Collage <br
+        /></a>
+        <div id="Medium">
+          <p id="all" class="text-button">All</p>
+          <p id="painting" class="text-button">Illustrations/Paintings</p>
+          <p id="3d" class="text-button">3D Art</p>
+          <p id="generative" class="text-button">Generative</p>
+          <p id="fashion" class="text-button">Textiles</p>
+          <p id="music" class="text-button">Music</p>
+        </div>
+        
+        <a class="subpage" href="genSketch.html"
+          >P5 Sketchbook<br
+        /></a>
+        <a class="subpage" href="blenderCharacters.html">Blender Characters<br /></a>
+        <br>
+        <!-- <a class="subpage" href="digitalPetri.html">digitalPetri<br /></a> -->
+        <!-- <a class="subpage" href="pixelWater.html">pixelWater<br /></a> -->
+        <a class="subpage" href="virtualShiva.html">VIRTUAL SHIVA<br /></a>
+        
+        <a class="subpage" href="cAtma.html">Collective Ātma<br /></a>
+        <a class="subpage" href="deGenerate.html">de-generate<br /></a>
+        <a class="subpage" href="hiveMind.html">Hive Mind<br /></a>
+        
+        <!--         <a class="subpage" href="art.html">Collective Atma<br /></a>
+        <a class="subpage" href="art.html">de-generate<br /></a>
+        <a class="subpage" href="art.html">Hive Mind<br /></a> -->
+        <!--         <a class="subpage" href="art.html">enigma<br /></a> -->
+      </div>
+
+      <!-- <a class="pages" href="research.html">Research <br /></a> -->
+      <a class="pages" href="exhibits.html">CV <br /></a>
+    </div>
+
+    <div id="art-title"></div>
+
+    <div id="newBody">
+      <div id="gallery">
+        <img
+          src="assets/art3.jpg"
+          class="painting"
+          title="Avatar"
+          data-title="Avatar"
+          data-medium="Oil Pastels"
+          data-size="8x11in"
+        />
+        <img
+          src="assets/IMG_6223.JPG"
+          class="painting"
+          data-title="betweenDimensions"
+          data-medium="Oil Pastels"
+          data-size="6x6in"
+        />
+        <img
+          src="assets/IMG_4887.jpg"
+          class="painting"
+          data-title="Creature"
+          data-medium="Oil Paint"
+          data-size="6x6in"
+        />
+        <img
+          src="assets/IMG_4874.jpg"
+          class="painting"
+          data-title="Forward"
+          data-medium="Oil Pastels"
+          data-size="8x11in"
+        />
+        <img
+          src="assets/art2.jpg"
+          class="painting"
+          data-title="getReady"
+          data-medium="Oil Paint"
+          data-size="6x6in"
+        />
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/art16.jpg?v=1717189982635"
+          class="painting"
+          data-title="Healing"
+          data-medium="Oil Pastels"
+          data-size="8x11in"
+        /> -->
+<!--         <img
+          src="assets/art6.jpg"
+          class="painting"
+          data-title="Nested"
+          data-medium="Oil Pastels"
+          data-size="7x7in"
+        /> -->
+        <img
+          src="assets/IMG_4880.jpg"
+          class="painting"
+          data-title="Kolam"
+          data-medium="Oil Pastels"
+          data-size="8x11in"
+        />
+        <img
+          src="assets/IMG_4876.jpg"
+          class="painting"
+          data-title="Lagoon"
+          data-medium="Oil Paintings"
+          data-size="6x6in"
+        />
+        <img
+          src="assets/Screenshot%202024-08-16%20at%203.37.21%E2%80%AFPM.png"
+          class="3d"
+          data-title="Avatar"
+          data-medium="Blender, Unity, Shader Art"
+   
+        />
+        <img
+          src="assets/art15.jpg"
+          class="painting"
+          data-title="Noisy"
+          data-medium="Oil Pastels"
+          data-size="8x11in"
+        />
+        <img
+          src="assets/art1.jpg"
+          class="painting"
+          data-title="soulSlug"
+          data-medium="Oil Pastels"
+          data-size="8x11in"
+        />
+<!--         <img
+          src="assets/IMG_4890.jpg"
+          class="painting"
+          data-title="aWalk"
+          data-medium="Oil Paint"
+          data-size="6x4in"
+        /> -->
+        <img
+          src="assets/art4.jpg"
+          class="painting"
+          data-title="onTheDome"
+          data-medium="Oil Pastels"
+          data-size="8x11in"
+        />
+        <img
+          src="assets/art9.jpg"
+          class="painting"
+          data-title="peerToServer"
+          data-medium="Oil Pastels"
+          data-size="8x11in"
+        />
+<!--         <img
+          src="assets/art11.jpg"
+          class="painting"
+          data-title="Room3, Room Series"
+          data-medium="Oil Paint, Mixed Media"
+          data-size="6x6in"
+        /> -->
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/art14.jpg?v=1717258181171"
+          class="painting"
+          data-title="Room5, Room Series"
+          data-medium="Oil Paint, Mixed Media"
+          data-size="6x6in"
+        /> -->
+<!--         <img
+          src="assets/IMG_4879.jpg"
+          class="painting"
+          data-title="seaSlug"
+          data-medium="Colour Pencil"
+          data-size="8x11in"
+        /> -->
+
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/art7.jpg?v=1717189962885"
+          class="painting"
+          data-title="Squids"
+          data-medium="Oil Paint"
+          data-size="4x6in"
+        />
+ -->
+<!--         <img
+          src="assets/IMG_4884.jpg"
+          class="painting"
+          data-title="whut"
+          data-medium="Oil Pastels"
+          data-size="8x11in"
+        /> -->
+
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/IMG_4894.jpg?v=1717262155945"
+          class="painting"
+          data-title="worldsEdge"
+          data-medium="Oil Paint"
+          data-size="5x5in"
+        /> -->
+        <img
+          src="assets/tongueTied3.jpg"
+          class="painting"
+          data-title="Tongue Tied"
+          data-medium="Oil Painting, Mixed Media"
+          data-size="12x16in"
+        />
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/Screenshot%202024-06-01%20at%203.49.13%E2%80%AFPM.png?v=1717269306363"
+          class="3d"
+          data-title="Babe"
+          data-medium="Blender"
+        /> -->
+        <img
+          src="assets/IMG_4895.png"
+          class="3d painting"
+          data-title="Gardener0"
+          data-medium="Wood Carving, Oil Paint"
+          data-size="5x2x2in"
+        />
+        <img
+          src="assets/IMG_4899.png"
+          class="3d painting"
+          data-title="Gardener1"
+          data-medium="Wood Carving, Oil Paint"
+          data-size="5x2x2in"
+        />
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/rock.png?v=1717269305286"
+          class="3d"
+          data-title="Jordan, de-generate"
+          data-medium="Blender"
+        /> -->
+        <img
+          src="assets/maker.png"
+          class="3d"
+          data-title="Maker"
+          data-medium="Blender"
+        />
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/Screenshot%202024-06-01%20at%203.52.42%E2%80%AFPM.png?v=1717269306785"
+          class="3d"
+          data-title="peerBot"
+          data-medium="Blender"
+        /> -->
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/plasMan.png?v=1717269304914"
+          class="3d"
+          data-title="plasMan, de-generate"
+          data-medium="Blender"
+        /> -->
+        <img
+          src="assets/witch.png"
+          class="3d"
+          data-title="sheCookin"
+          data-medium="Blender"
+        />
+        
+        <img
+          src="assets/collectiveAtma1.png"
+          class="painting"
+          data-title="Atma"
+          data-medium="Oil Pastels"
+          data-size="6x6in"
+        />
+        
+        <img
+          src="assets/collectiveAtma3.png"
+          class="3d"
+          data-title="collectiveAtma"
+          data-medium="Blender"
+        />
+        
+        <img
+          src="assets/IMG_6218.JPG"
+          class="3d"
+          data-title="aMusician"
+          data-medium="Oil Painting"
+          data-size="6x6in"
+        />
+        
+        <img
+          src="assets/IMG_6219.JPG"
+          class="3d"
+          data-title="slothfullyCute"
+          data-medium="Oil Painting"
+          data-size="8x8in"
+        />
+        
+        
+
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/IMG_6326.png?v=1717276687069"
+          class="fashion generative"
+          data-title="transientGlove"
+          data-medium="Crochet, Arduino BLE"
+        /> -->
+        <img
+          src="assets/Screen%20Shot%202022-06-15%20at%2012.06.57%20AM.png"
+          class="3d"
+          data-title="Tulip, de-generate"
+          data-medium="Blender"
+        />
+
+        <img
+          src="assets/damaged.png"
+          class="3d"
+          data-title="slimeCat, de-generate"
+          data-medium="Blender"
+        />
+
+        <img
+          src="assets/Hive.gif"
+          class="generative"
+          data-title="Hive0"
+          data-medium="p5"
+        />
+
+        <img
+          src="assets/generativeRoom.gif"
+          class="generative"
+          data-title="generativeRoom"
+          data-medium="p5"
+        />
+
+        <!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/generative13.png?v=1717275356783"
+          class="generative"
+          data-title="bloodCell"
+          data-medium="Shader"
+        /> -->
+
+        <img
+          src="assets/angle0.gif"
+          class="generative"
+          data-title="Angel"
+          data-medium="Unity"
+        />
+
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/angel.gif?v=1718456682926"
+          class="generative"
+          data-title="Angel"
+          data-medium="Unity"
+        /> -->
+<!--         <img
+          src="assets/embryo.gif"
+          class="generative"
+          data-title="Embryo"
+          data-medium="TouchDesigner"
+        /> -->
+        <img
+          src="assets/generative2.png"
+          class="generative"
+          data-title="Enigma"
+          data-medium="p5"
+        />
+        <img
+          src="assets/generative3.png"
+          class="generative"
+          data-title="Enigma"
+          data-medium="p5"
+        />
+
+        <img
+          src="assets/generative1.png"
+          class="generative"
+          data-title="Enigma"
+          data-medium="p5"
+        />
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/generative12.png?v=1717275353772"
+          class="generative"
+          data-title="Hive1"
+          data-medium="p5"
+        /> -->
+        <img
+          src="assets/orb.gif"
+          class="generative 3d"
+          data-title="sheCookin"
+          data-medium="Unity"
+        />
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/generative5.png?v=1717275339351"
+          class="generative fashion"
+          data-title="transientGlove"
+          data-medium="TouchDesigner"
+        /> -->
+
+       <!--  <img
+          src="assets/webtank.png"
+          class="fashion"
+          data-title="webTop"
+          data-medium="Crochet"
+        /> -->
+
+        <img
+          src="assets/BrainFungus.gif"
+          class="generative"
+          data-title="brainFungus, Hive Mind"
+          data-medium="p5"
+        />
+
+        <img
+          src="assets/degenerate.gif"
+          class="generative"
+          data-title="de-generate"
+          data-medium="Unity"
+        />
+
+<!--         <img
+          src="assets/art0.jpg"
+          class="painting"
+          data-title="Didi"
+          data-medium="Oils Pastels"
+        /> -->
+
+        <img
+          src="assets/albumCover2.png"
+          class="music"
+          data-title="de-generate Soundtrack"
+          data-medium="Logic"
+        />
+
+        <img
+          src="assets/not%20fair.jpg"
+          class="music"
+          data-title="Not Fair"
+          data-medium="Logic"
+        />
+
+<!--         <img
+          src="assets/IMG_5066.png"
+          class="fashion"
+          data-title="getStiched"
+          data-medium="Recycled Tshirt"
+        /> -->
+
+        <img
+          src="assets/memories.png?v=1718626792376"
+          class="fashion"
+          data-title="memoriesTubeTop"
+          data-medium="Crochet Mohair"
+        />
+
+<!--         <img
+          src="assets/glitchTop.png"
+          class="fashion"
+          data-title="glitchTop"
+          data-medium="Crochet Wool"
+        /> -->
+<!-- 
+        <img
+          src="assets/skullShirt.png"
+          class="fashion"
+          data-title="skullTop"
+          data-medium="Recycled Shirt"
+        /> -->
+
+<!--         <img
+          src="https://cdn.glitch.global/10e03993-f0b6-4041-9960-fed324f86997/grannySquares.png?v=1718626788708"
+          class="fashion"
+          data-title="diamondTank"
+          data-medium="Crochet Wool"
+        /> -->
+
+        <img
+          src="assets/hivemindInstallation.png"
+          class="generative 3D"
+          data-title="Hive Mind Installation"
+          data-medium="CRT & Raspberry Pie Installation"
+        />
+      </div>
+    </div>
+  </body>
+
+  <style>
+    img {
+      width: 13%; /* Resize image to 10% of its original size */
+      height: auto; /* Maintain aspect ratio */
+      position: absolute;
+      z-index: 100;
+    }
+
+    .text-button {
+      cursor: pointer;
+      color: blue;
+      margin: 4px 2px;
+      display: inline-block;
+      padding: 3px 8px;
+      border: 1px solid blue;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    #Medium {
+      padding: 5px 0px 5px 10px;
+    }
+
+    .text-button:hover {
+      background-color: lightblue;
+    }
+
+    .text-button.active {
+      background-color: blue;
+      color: white;
+    }
+
+    #art-title {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: blue;
+      display: none; /* Hide initially */
+      background-color: white;
+      padding: 5px;
+      border: 1px solid blue; /* Add border for better visibility */
+      border-radius: 5px; /* Add some border radius for smooth corners */
+      z-index: 9999; /* Ensure it appears on top of everything */
+      overflow-y: auto;
+    }
+    
+    #credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+  color: white; /* Optional: Changes text color */
+  font-size: 12px; /* Optional: Adjust the text size */
+}
+
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setNewBodyWidth();
+      positionImages();
+    });
+    // Get all text buttons
+    const buttons = document.querySelectorAll(".text-button");
+
+    // Get all images
+    const images = document.querySelectorAll("#gallery img");
+
+    // Add click event listener to each button
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        // Add 'active' class to the clicked button
+        button.classList.add("active");
+
+        // Filter images based on the clicked button's id
+        const filter = button.id;
+        images.forEach((image) => {
+          if (filter === "all" || image.classList.contains(filter)) {
+            image.style.display = "inline-block";
+          } else {
+            image.style.display = "none";
+          }
+        });
+      });
+    });
+
+    // Function to set the width of #newBody
+    function setNewBodyWidth() {
+      var newBody = document.getElementById("newBody");
+      var menuWidth = document.getElementById("menu").offsetWidth;
+      var newWidth = window.innerWidth - menuWidth;
+      newBody.style.width = newWidth + "px";
+    }
+
+    // Function to generate random position for an image
+    function getRandomPosition(imgWidth, imgHeight) {
+      var newBody = document.getElementById("newBody");
+      var maxX = newBody.offsetWidth - imgWidth * 1.25 + 10;
+      var maxY = newBody.offsetHeight - imgHeight;
+      var randomX = Math.floor(Math.random() * maxX);
+      var randomY = Math.floor(Math.random() * maxY);
+      return { x: randomX, y: randomY };
+    }
+
+    // Function to check if two rectangles overlap by more than 10%
+    function isOverlapping(pos1, size1, pos2, size2) {
+      var overlapX = Math.max(
+        0,
+        Math.min(pos1.x + size1.width, pos2.x + size2.width) -
+          Math.max(pos1.x, pos2.x)
+      );
+      var overlapY = Math.max(
+        0,
+        Math.min(pos1.y + size1.height, pos2.y + size2.height) -
+          Math.max(pos1.y, pos2.y)
+      );
+      var overlapArea = overlapX * overlapY;
+      var maxArea = Math.min(
+        size1.width * size1.height,
+        size2.width * size2.height
+      );
+      return overlapArea > 0.2 * maxArea;
+    }
+
+    // Apply random position to each img element ensuring no significant overlap
+    function positionImages() {
+      var images = document.querySelectorAll("#newBody img");
+      var positions = [];
+
+      images.forEach(function (img) {
+        var imgWidth = img.offsetWidth;
+        var imgHeight = img.offsetHeight;
+        var position;
+        var size = { width: imgWidth, height: imgHeight };
+
+        // Retry getting random position until no significant overlap is found
+        do {
+          position = getRandomPosition(imgWidth, imgHeight);
+        } while (positions.some((p) => isOverlapping(p, size, position, size)));
+
+        img.style.left = position.x + "px";
+        img.style.top = position.y + "px";
+        positions.push(position);
+
+        // Add hover event listeners for each image
+        img.addEventListener("mouseenter", function () {
+          img.style.zIndex = "1000";
+          img.style.transition = "transform 0.3s, border 0.3s";
+          img.style.transform = "scale(2)";
+          img.style.border = "2px solid blue";
+
+          // Display details
+          const title = img.getAttribute("data-title");
+          const medium = img.getAttribute("data-medium");
+          const size = img.getAttribute("data-size");
+          const titleElement = document.getElementById("art-title");
+          let details = `<strong>${title}</strong><br>Medium: ${medium}`;
+          if (size) {
+            details += `<br>Size: ${size}`;
+          }
+          titleElement.innerHTML = details;
+          titleElement.style.display = "block";
+        });
+
+        img.addEventListener("mouseleave", function () {
+          img.style.zIndex = "auto";
+          img.style.transition = "transform 0.3s, border 0.3s";
+          img.style.transform = "scale(1)";
+          img.style.border = "none";
+
+          // Hide title
+          const titleElement = document.getElementById("art-title");
+          titleElement.style.display = "none";
+        });
+      });
+    }
+
+    // Position images on page load and resize
+    window.onload = function () {
+      setNewBodyWidth();
+      positionImages();
+    };
+    window.onresize = function () {
+      setNewBodyWidth();
+      positionImages();
+    };
+  </script>
+</html>
