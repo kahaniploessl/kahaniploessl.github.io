@@ -12,38 +12,37 @@
     />
 <!--     <link rel="stylesheet" href="/art.css" /> -->
     <link rel="stylesheet" href="style/menu.css" />
+    <link rel="stylesheet" href="style/artmenu.css" />
 
     <title>Code Sketches</title>
   </head>
   <body>
+
+
     <div id="menu">
       <a id="title" href="index.html">KAHANI | कहानी</a>
-      <p id="hovered-portal-title"></p>
+      <!-- <p id="hovered-portal-title"></p> -->
 
       <a class="pages" href="about.html">About <br /></a>
-      <a id="current" class="pages" href="art.html">Art <br /></a>
-      <div id="subart">
-        <a class="subpage" href="art.html">Generative Collage <br /></a>
-        <!--         <a id="subcurrent" class="subpage" href="art.html"
-          >Collective Atma<br
-        /></a> -->
-        
-        
-        <a id="subcurrent" class="subpage" href="genSketch.html"
-          >P5 Sketchbook<br
-        /></a>
-        <a class="subpage" href="blenderCharacters.html">Blender Characters<br /></a>
-        <br>
-        <!-- <a class="subpage" href="digitalPetri.html">digitalPetri<br /></a> -->
-        <!-- <a class="subpage" href="pixelWater.html">pixelWater<br /></a> -->
-        <a class="subpage" href="virtualShiva.html">VIRTUAL SHIVA<br /></a>
-        
-        <a class="subpage" href="cAtma.html">Collective Ātma<br /></a>
-        <a class="subpage" href="deGenerate.html">de-generate<br /></a>
-        <a class="subpage" href="hiveMind.html">Hive Mind<br /></a>
-        
-        <!--         <a class="subpage" href="art.html">Hive Mind<br /></a>
-        <a class="subpage" href="art.html">enigma<br /></a> -->
+
+      <div class="menu-item">
+        <a id="current" class="pages" href="virtualShiva.html">Art <br /></a>
+        <div id="subart">
+          <a class="subpage" href="brush.html">| BRUSH.jpeg &nbsp<br /></a>
+          <a class="subpage" href="virtualShiva.html">| VIRTUAL SHIVA &nbsp<br /></a>
+          <a class="subpage" href="remSmear.html">| remSmear &nbsp<br /></a>
+          <a class="subpage" href="cAtma.html">| Collective Ātma &nbsp<br /></a>
+          <a class="subpage" href="deGenerate.html">| de-generate &nbsp<br /></a>
+          <a class="subpage" href="hiveMind.html">| Hive Mind &nbsp<br /></a>
+
+          <br>
+          <a class="subpage" href="art.html">| Concept Art &nbsp<br/></a>    
+          <a id="subcurrent" class="subpage" href="genSketch.html"
+            >| P5 Sketchbook &nbsp<br
+          /></a>
+          <br>
+
+        </div>
       </div>
 
       <!-- <a class="pages" href="research.html">Research <br /></a> -->
@@ -65,13 +64,13 @@
       
       <iframe src="https://editor.p5js.org/kahoogie/full/pOe5Sy5P9"></iframe>
       <iframe src="https://editor.p5js.org/kahoogie/full/1jzxs492y"></iframe>
-<!--       <iframe src="https://editor.p5js.org/kahoogie/full/4njEz8yel"></iframe> -->
-      <iframe src="https://editor.p5js.org/kahoogie/full/NlzwlzTnz"></iframe>
+      <iframe src="https://editor.p5js.org/kahoogie/full/4njEz8yel"></iframe>
+      <!-- <iframe src="https://editor.p5js.org/kahoogie/full/NlzwlzTnz"></iframe> -->
       <iframe src="https://editor.p5js.org/kahoogie/full/jdA7oZI2v"></iframe>
       
       <iframe src="https://editor.p5js.org/kahoogie/full/-N_uY7cq3"></iframe>
       
-      <iframe src="https://editor.p5js.org/kahoogie/full/ekWTsVJDC"></iframe>
+      <!-- <iframe src="https://editor.p5js.org/kahoogie/full/ekWTsVJDC"></iframe> -->
 <!--       <iframe src="https://editor.p5js.org/kahoogie/full/nPQxStBe_"></iframe> -->
 <!--       <iframe src="https://editor.p5js.org/kahoogie/full/dxGGuAvQ"></iframe>
       <iframe src="https://editor.p5js.org/kahoogie/full/dD1qlLWK1"></iframe> -->
@@ -80,6 +79,18 @@
   </body>
 
   <style>
+/*
+    @media (max-width: 768px) {
+
+      #menu {
+        height: 6em;
+        bottom: 1em;
+        position: relative;
+      }
+
+    }*/
+
+
     h1 {
       margin: 0px;
     }
@@ -101,8 +112,18 @@
       display: inline-block;
     }
     
-    #menu {
+/*    #menu {
       height: 300%;
+    }*/
+
+    @media (max-width: 768px) {
+      iframe {
+        width: 45%;
+        margin:10px;
+        height: 500px;
+        float: left;
+        display: inline-block;
+      }
     }
   </style>
 </html>

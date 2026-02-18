@@ -1,0 +1,62 @@
+h1 {
+  margin: 0px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #e64e2c;
+  font-size: 50px;
+}
+
+h2 {
+  margin: 0px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #e64e2c;
+  font-size: 30px;
+}
+
+h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  width: 80vw;
+  font-size: 30px;
+  color: rgb(100, 100, 100);
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 83vw;
+  height: 600px;
+  padding-bottom: 10px;
+}
+
+.horizontal-scroll img {
+  width: auto;
+  height: 600px; /* Adjust height as needed */
+  margin-right: 10px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+
+  #menu {
+    padding: 30px 30px 80px 30px;
+  }
+
+  .horizontal-scroll {
+    width: 96vw;
+  }
+
+}
+
+
+    
