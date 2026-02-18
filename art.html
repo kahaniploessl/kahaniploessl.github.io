@@ -34,10 +34,9 @@
       <a id="title" href="index.html">KAHANI | कहानी</a>
       <!-- <p id="hovered-portal-title"></p> -->
 
-      <a class="pages" href="about.html">About <br /></a>
+      <a class="pages" href="about.html">About &nbsp<br /></a>
 
-      <div class="menu-item">
-        <a id="current" class="pages" href="virtualShiva.html">Art <br /></a>
+        <a id="current" class="pages" href="brush.html">Art &nbsp<br /></a>
         <div id="subart">
           <a class="subpage" href="brush.html">| BRUSH.jpeg  &nbsp<br /></a>
           <a class="subpage" href="virtualShiva.html">| VIRTUAL SHIVA  &nbsp<br /></a>
@@ -54,8 +53,8 @@
           <br>
 
         </div>
-      </div>
-      <a class="pages" href="exhibits.html">CV <br /></a>
+
+      <a class="pages" href="exhibits.html">CV &nbsp<br /></a>
     </div>
 
     <div id="art-title"></div>
@@ -557,9 +556,13 @@
       }*/
 
       body {
-        height: 80em;
+        height: 60em;
       }
 
+      img {
+        width: 25%;
+        height: auto;
+      }
     }
 
     img {
@@ -665,9 +668,15 @@
     // Function to set the width of #newBody
     function setNewBodyWidth() {
       var newBody = document.getElementById("newBody");
-      var menuWidth = document.getElementById("menu").offsetWidth;
-      var newWidth = window.innerWidth - menuWidth;
-      newBody.style.width = newWidth + "px";
+      var menu = document.getElementById("menu");
+      var windowWidth = window.innerWidth;
+
+      if (windowWidth > 768) { // Desktop
+        var menuWidth = menu.offsetWidth;
+        newBody.style.width = (windowWidth - menuWidth) + "px";
+      } else { // Mobile
+        newBody.style.width = windowWidth + "px"; // Full width
+      }
     }
 
     // Function to generate random position for an image
@@ -697,7 +706,7 @@
         size1.width * size1.height,
         size2.width * size2.height
       );
-      return overlapArea > 1 * maxArea;
+      return overlapArea > 0.15 * maxArea;
     }
 
     // Apply random position to each img element ensuring no significant overlap

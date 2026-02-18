@@ -105,18 +105,22 @@ a:hover {
     flex-direction: column; /* Stack menu on top */
   }
 
+  .pages {
+/*    padding:10px;*/
+  }
+
   #menu {
-    width: 100%;
+/*    width: 100%;*/
     border-right: none;
     border-bottom: 2px solid rgba(200, 200, 200, 0.1);
     padding: 30px;
-    display: flex;
+/*    display: flex;*/
     flex-direction: row;
     align-items: center;
     gap: 20px;
     overflow-x: auto; /* Horizontal scroll if needed */
 /*    overflow-y: hidden;*/
-    white-space: nowrap;
+/*    white-space: nowrap;*/
 /*    height:7em;*/
   }
 
@@ -126,7 +130,7 @@ a:hover {
 
   a {
     display: inline-block;
-    font-size: 24px;
+/*    font-size: 24px;*/
     margin-bottom: 0;
   }
 
@@ -138,7 +142,7 @@ a:hover {
   }*/
 
   .subpage {
-    font-size: 26px;
+    font-size: 20px;
     padding-left: 0px;
     float:left;
   }
@@ -150,7 +154,7 @@ a:hover {
     position: absolute;
     left: 0vw;
     padding: 30px;
-    top: 3em;
+    top: 5em;
   }
 
   #title {

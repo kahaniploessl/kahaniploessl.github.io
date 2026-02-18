@@ -41,7 +41,7 @@ p {
 
 .horizontal-scroll img {
   width: auto;
-  height: 600px; /* Adjust height as needed */
+/*  height: 600px;*/
   margin-right: 10px;
   display: inline-block;
 }
@@ -49,11 +49,12 @@ p {
 @media (max-width: 768px) {
 
   #menu {
-    padding: 30px 30px 80px 30px;
+    padding: 30px 30px 120px 30px;
   }
 
   .horizontal-scroll {
     width: 96vw;
+    height: 300px;
   }
 
 }
