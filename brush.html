@@ -44,7 +44,8 @@
     </div>
 
     <div id="newBody">
-      <div class="horizontal-scroll">
+      <div class="horizontal-scroll" id="autoScroll">
+        <!-- <div class="horizontal-scroll-content"> -->
         <img
           src="assets/eat.jpg"
         />
@@ -58,6 +59,7 @@
         <img
           src="assets/brushUI.png"
         />
+      <!-- </div> -->
 
         
       </div>
@@ -115,5 +117,45 @@
       /> -->
     </div>
   </body>
+
+ <!--  <script type="text/javascript">
+    const container = document.getElementById("autoScroll");
+const speed = 10; // pixels per frame
+let scrollPos = 0;
+let isUserScrolling = false;
+let scrollTimeout;
+
+function smoothScroll() {
+  if (!isUserScrolling) {
+    scrollPos += speed;
+
+    // Loop infinitely
+    if (scrollPos >= container.scrollWidth / 2) {
+      scrollPos = 0;
+    }
+
+    container.scrollLeft = scrollPos;
+  }
+
+  requestAnimationFrame(smoothScroll);
+}
+
+// Detect user scroll
+container.addEventListener("scroll", () => {
+  isUserScrolling = true;
+
+  // Wait 1 second after user stops scrolling to resume auto-scroll
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    // Update scrollPos to current position to avoid snapping back
+    scrollPos = container.scrollLeft;
+    isUserScrolling = false;
+  }, 1000);
+});
+
+smoothScroll();
+
+
+  </script> -->
 
 </html>
