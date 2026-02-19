@@ -59,6 +59,10 @@ p {
     height: 300px;
   }
 
+  p {
+    font-size: 16px;
+  }
+
 }
 
 
